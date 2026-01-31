@@ -6,13 +6,9 @@ class Voiture{
     private string $couleur;
     private int $vitesse =0;
 
-  public function accelerer(){
-    $this->vitesse+=10;
-  }
+  
 
-  public function afficherInfos(){
-    echo "Voiture un marque: $this->marque  couleur :$this->couleur  vitesse:$this->vitesse";
-  }
+  
    
     public function getId()
     {
@@ -58,5 +54,12 @@ class Voiture{
 
     }
 
+    public function accelerer(){
+    $this->vitesse+=10;
+  }
+
+  public function afficherInfos(){
+    echo 'Voiture un marque :  '.$this->marque. ' -couleur : '.$this->couleur. ' -vitesse: '.$this->vitesse;
+  }
 
 }

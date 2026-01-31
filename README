@@ -1,3 +1,27 @@
-class :hwa wahd lmohit li hta ikon fih les methodes o lProprietes
+CREATE TABLE auteurs(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(20) NOT NULL,
+    nationalité VARCHAR(20)
+)ENGINE=INNODB;
 
-object : 
+CREATE TABLE Livres(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    titre VARCHAR(20) NOT NULL,
+    prix FLOAT NOT NULL,
+    date_publication VARCHAR(15),
+    auteur_id int,
+    FOREIGN KEY(auteur_id) REFERENCES auteurs(id)
+)ENGINE=INNODB;
+
+
+ALTER TABLE livres ADD COLUMN stock int
+
+ALTER TABLE livres MODIFY COLUMN titre VARCHAR(30);
+
+ALTER TABLE Livres DROP FOREIGN KEY livres_ibfk_1;
+
+ALTER TABLE livres DROP auteur_id;
+
+DROP TABLE auteurs; 
+
+DELETE FROM livres
