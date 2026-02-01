@@ -25,3 +25,43 @@ ALTER TABLE livres DROP auteur_id;
 DROP TABLE auteurs; 
 
 DELETE FROM livres
+
+
+INSERT INTO auteurs (nom,nationalité) VALUES 
+('ousama','Saoudite');
+
+INSERT INTO livres (titre,prix,date_publication,auteur_id) VALUES ('peur',25.50,'11/11/2023',1);
+
+
+UPDATE livres SET prix = 28.05 WHERE id =2;
+UPDATE livres SET prix = 39.05 WHERE id =3;
+UPDATE livres SET prix = 50.05 WHERE id =4;
+UPDATE livres SET prix = 28.05 WHERE id =5;
+UPDATE livres SET prix = 28.05 WHERE id =6;
+
+
+DELETE FROM livres WHERE stock =0;
+
+SELECT * FROM livres;
+
+SELECT * FROM `livres` WHERE prix<10;
+
+SELECT * FROM auteurs WHERE nationalité = 'egypte';
+
+SELECT * FROM livres ORDER BY date_publication DESC;
+
+SELECT COUNT(id) FROM livres;
+
+SELECT livres.titre , auteurs.nom FROM auteurs JOIN livres ON livres.auteur_id = auteurs.id;
+
+SELECT AVG(prix) FROM livres;
+
+SELECT auteurs.nom ,count(livres.id) FROM auteurs join livres ON livres.auteur_id = auteurs.id GROUP BY auteurs.nationalité;
+
+SELECT titre FROM livres WHERE titre LIKE '%ababl';
+
+
+
+
+Encapsulation : Quelle est la différence fondamentale entre la visibilité private et protected ? private hta n9dro njbhm  ri bi lgeterse o seterse : protected hta n9dro nkhdmo biha fax hta nastonsio classe parent mn class children;
+Méthodes Magiques : ma 3ndnax overriding f php donc tankhdmo bles magique methodes ex : __call
